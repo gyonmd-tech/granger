@@ -1,0 +1,6 @@
+{
+  "name": "Granger Sportainment",
+  "description": "Modern, energetic landing page and sportainment platform for custom wellness, interactive tracking, event booking, and a complete official gear & apparel store.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

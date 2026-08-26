@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #a63b00;
+  --color-primary-container: #ff671c;
+  --color-primary-fixed: #ffdbce;
+  --color-primary-fixed-dim: #ffb599;
+  --color-tertiary: #006493;
+  --color-tertiary-container: #00a0e7;
+  --color-surface-dark: #0A0A0A;
+  --color-text-primary: #0A0A0A;
+  --color-text-secondary: #6B7280;
+  --color-bg-base: #F0F2F5;
+  --color-border-subtle: #E5E7EB;
+  --color-secondary-fixed-dim: #acc9eb;
+  
+  --font-serif: "Playfair Display", Georgia, Cambria, serif;
+  --font-sport: "Barlow Condensed", "Bebas Neue", -apple-system, sans-serif;
+  --font-tech: "Chakra Petch", -apple-system, monospace, sans-serif;
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F0F2F5;
+  color: #0A0A0A;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* GPU Hardware Acceleration & Smooth Compositing */
+.transform-gpu {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+img {
+  content-visibility: auto;
+}
+
+/* Touch & Mobile Scrolling Ergonomics */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.touch-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.pb-safe {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c1017;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252b36;
+  border-radius: 4px;
+  border: 2px solid #0c1017;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF671C;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sport {
+  font-family: var(--font-sport);
+}
+
+.font-tech {
+  font-family: var(--font-tech);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.hero-watermark-text {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+/* Shimmer Sweep Animation Utility */
+@keyframes shine-sweep {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+.animate-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transform: translateX(-100%) skewX(-15deg);
+}
+
+.animate-shine:hover::after {
+  animation: shine-sweep 0.85s ease-in-out;
+}
+
+/* Holographic Shimmer Effect for ID Cards */
+@keyframes holo-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-holo {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 103, 28, 0.15) 0%,
+    rgba(0, 160, 231, 0.15) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 103, 28, 0.15) 75%,
+    rgba(0, 160, 231, 0.15) 100%
+  );
+  background-size: 300% 300%;
+  animation: holo-shimmer 6s ease infinite;
+}
+
+/* Floating Ambient Motion */
+@keyframes ambient-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: ambient-float 4s ease-in-out infinite;
+}
+
+/* Pulse Ring Animation */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Hover Scale Utility */
+.group:hover .group-hover\:scale-108 {
+  transform: scale(1.08);
+}
+
+.hover\:scale-102:hover {
+  transform: scale(1.02);
+}
+
+.hover\:scale-104:hover {
+  transform: scale(1.04);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" width="64" height="64">
+  <defs>
+    <linearGradient id="grangerFlameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FFA149" />
+      <stop offset="45%" stopColor="#FF671C" />
+      <stop offset="100%" stopColor="#DC3800" />
+    </linearGradient>
+    <linearGradient id="grangerCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#38BDF8" />
+      <stop offset="100%" stopColor="#008FD0" />
+    </linearGradient>
+    <linearGradient id="grangerCarbonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#1E293B" />
+      <stop offset="100%" stopColor="#0F172A" />
+    </linearGradient>
+  </defs>
+
+  <rect x="3" y="3" width="48" height="48" rx="13" fill="url(#grangerCarbonGrad)" stroke="#FF671C" stroke-width="1.5" />
+  <rect x="6" y="6" width="42" height="42" rx="10" fill="none" stroke="rgba(255,103,28,0.3)" stroke-width="1" stroke-dasharray="4 2" />
+
+  <!-- Upper Speed Blade -->
+  <path d="M 40 13 L 20 13 C 14.5 13 11 17 11 22.5 L 11 24.5 C 11 24.5 15.5 20.5 21 20.5 L 35.5 20.5 L 40 13 Z" fill="url(#grangerFlameGrad)" />
+
+  <!-- Lower Speed Blade -->
+  <path d="M 11 29.5 L 11 31.5 C 11 37 14.5 41 20 41 L 38 41 C 42 41 44 38.5 44 34.5 L 44 26 L 27 26 L 29.5 32 L 37.5 32 L 37.5 34.5 C 37.5 35.8 36.2 36.5 34.5 36.5 L 20 36.5 C 16 36.5 14 34.5 14 31.5 L 14 27 L 11 29.5 Z" fill="url(#grangerFlameGrad)" />
+
+  <!-- Cross-Cutting White Lightning Bar -->
+  <path d="M 33 9.5 L 41.5 9.5 L 30 44.5 L 21.5 44.5 Z" fill="#FFFFFF" />
+
+  <!-- Cyan Apex -->
+  <polygon points="44,14 47,19 41,19" fill="url(#grangerCyanGrad)" />
+</svg>
